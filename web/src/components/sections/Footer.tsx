@@ -1,4 +1,4 @@
-const REPO_URL = "https://github.com/patoperez/supply-chain-control-tower";
+const REPO_URL = "https://github.com/patoperez/supply-chain-analysis";
 
 function GithubMark() {
   return (
