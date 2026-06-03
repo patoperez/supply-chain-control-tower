@@ -4,6 +4,7 @@
  * Client Component does NOT pull the other datasets into the client bundle.
  */
 
+import { withBasePath } from "./basePath";
 import type { DailyAggRow, DailyAggregates, Region } from "./types";
 
 /** Expand the columnar daily-aggregate payload into typed row objects. */
@@ -30,7 +31,9 @@ export function parseDailyAggregates(payload: DailyAggregates): DailyAggRow[] {
 export async function loadDailyAggregates(
   signal?: AbortSignal,
 ): Promise<DailyAggRow[]> {
-  const res = await fetch("/data/daily_aggregates.json", { signal });
+  const res = await fetch(withBasePath("/data/daily_aggregates.json"), {
+    signal,
+  });
   if (!res.ok) {
     throw new Error(`Failed to load daily_aggregates.json (${res.status})`);
   }
