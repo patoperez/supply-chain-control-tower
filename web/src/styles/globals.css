@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/*
+  "Control Room Editorial" — design tokens (the single source of truth for color
+  and type). Declared in Tailwind v4's @theme so they generate semantic utilities
+  (bg-base, text-bright, text-accent, border-border, font-display, font-mono, ...).
+
+  Colors are SEMANTIC, never decorative:
+    accent (green) = healthy / on-track   warn (amber) = at-risk
+    danger (red)   = stockout / late      info (blue)  = neutral data series
+  Never hardcode a hex in a component — always use these tokens.
+*/
+@theme {
+  /* Surfaces — control-room near-black, cool */
+  --color-base: #0a0e14;       /* page background */
+  --color-panel: #121821;      /* raised cards */
+  --color-panel-2: #1a2230;    /* nested surfaces, table rows */
+  --color-border: #232d3d;     /* dividers, panel edges */
+  --color-grid: #1c2533;       /* chart gridlines */
+
+  /* Text */
+  --color-bright: #e6edf3;     /* headlines, key numbers */
+  --color-body: #b8c2cf;       /* body copy */
+  --color-dim: #7d8a9c;        /* captions, labels, axes */
+
+  /* Semantic status — reserved for meaning, never decoration */
+  --color-accent: #00d9a3;     /* HEALTHY / on-track / good — the signature */
+  --color-warn: #ffb84d;       /* at-risk */
+  --color-danger: #ff5e5e;     /* stockout / late / high-risk */
+  --color-info: #4d9fff;       /* neutral data series (forecast line, etc.) */
+
+  /* Type — serif display, sans body, mono for ALL numbers/SKUs/dates/codes.
+     The var() targets are set by next/font on <html> (see layout.tsx). */
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-spline-sans);
+  --font-mono: var(--font-spline-mono);
+}
+
+/* Non-utility design tokens preserved from the system (used by later tasks:
+   narrative measure, content width, and motion easing/durations). */
+:root {
+  --measure: 65ch;
+  --content-max: 72rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-reveal: 600ms;
+  --duration-fast: 200ms;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    background-color: var(--color-base);
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-base);
+    color: var(--color-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Dark-theme scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-base);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-dim);
+  }
+}
+
+/* ── Section 1 network visual (the signature motif) ──
+   Routes stay faint and static; each node breathes a gentle, staggered halo. */
+.ng-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ng-halo 3.6s var(--ease-out) infinite;
+}
+@keyframes ng-halo {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ng-halo {
+    animation: none;
+    opacity: 0;
+  }
+}

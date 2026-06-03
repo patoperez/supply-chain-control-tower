@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Next.js build output (also covered by web/.gitignore)
+.next/
+out/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+
+# Local dev tooling (machine-specific CDP screenshot / QA helpers)
+web/shot.mjs
+web/qa.mjs
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# NOTE: web/public/data/**.json IS committed on purpose — the app reads those
+# files at build/runtime (the Cloudflare deploy serves the static export).

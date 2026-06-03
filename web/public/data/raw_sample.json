@@ -1,0 +1,182 @@
+[
+  {
+    "shipment_id": "SH-000002", 
+    "order_date": "2024-01-04", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-0001", 
+    "sku": "sku-005", 
+    "qty_ordered": 65, 
+    "qty_received": 65, 
+    "promised_delivery": "2024-01-06", 
+    "actual_delivery": "2024-01-06", 
+    "status": "Delivered", 
+    "issues": [
+      "sku_typo"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-000009", 
+    "order_date": "2024-01-25", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-0001", 
+    "sku": "sku-019", 
+    "qty_ordered": 36, 
+    "qty_received": 36, 
+    "promised_delivery": "2024-01-29", 
+    "actual_delivery": "2024-02-02", 
+    "status": "Delivered", 
+    "issues": [
+      "late_delivery", 
+      "sku_typo"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-000005", 
+    "order_date": "2024-01-12", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-0001", 
+    "sku": "SKU-011", 
+    "qty_ordered": 25, 
+    "qty_received": 14, 
+    "promised_delivery": "2024-01-16", 
+    "actual_delivery": "2024-01-16", 
+    "status": "Delivered", 
+    "issues": [
+      "incomplete_load"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-000008", 
+    "order_date": "2024-01-21", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-0001", 
+    "sku": "SKU-017", 
+    "qty_ordered": 57, 
+    "qty_received": 49, 
+    "promised_delivery": "2024-01-26", 
+    "actual_delivery": "2024-01-26", 
+    "status": "Delivered", 
+    "issues": [
+      "incomplete_load"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-000220", 
+    "order_date": "2024-02-16", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-9008", 
+    "sku": "SKU-007", 
+    "qty_ordered": 58, 
+    "qty_received": 58, 
+    "promised_delivery": "2024-02-20", 
+    "actual_delivery": "2024-02-20", 
+    "status": "Delivered", 
+    "issues": [
+      "phantom_store"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-000350", 
+    "order_date": "2024-03-25", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-9000", 
+    "sku": "SKU-015", 
+    "qty_ordered": 82, 
+    "qty_received": 82, 
+    "promised_delivery": "2024-03-29", 
+    "actual_delivery": "2024-03-29", 
+    "status": "Delivered", 
+    "issues": [
+      "phantom_store"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-000002", 
+    "order_date": "2024-01-04", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-0001", 
+    "sku": "SKU-017", 
+    "qty_ordered": 49, 
+    "qty_received": 49, 
+    "promised_delivery": "2024-01-06", 
+    "actual_delivery": "2024-01-07", 
+    "status": "Delivered", 
+    "issues": [
+      "late_delivery"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-000005", 
+    "order_date": "2024-01-12", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-0001", 
+    "sku": "SKU-018", 
+    "qty_ordered": 47, 
+    "qty_received": 47, 
+    "promised_delivery": "2024-01-16", 
+    "actual_delivery": "2024-01-18", 
+    "status": "Delivered", 
+    "issues": [
+      "late_delivery"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-000059", 
+    "order_date": "2024-01-31", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-0003", 
+    "sku": "SKU-020", 
+    "qty_ordered": -50, 
+    "qty_received": 50, 
+    "promised_delivery": "2024-02-03", 
+    "actual_delivery": "2024-02-03", 
+    "status": "Delivered", 
+    "issues": [
+      "negative_null_qty"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-000025", 
+    "order_date": "2024-03-17", 
+    "cd_id": "CD-MX", 
+    "store_id": "ST-0001", 
+    "sku": "SKU-006", 
+    "qty_ordered": 49, 
+    "qty_received": null, 
+    "promised_delivery": "2024-03-21", 
+    "actual_delivery": "2024-03-21", 
+    "status": "Delivered", 
+    "issues": [
+      "incomplete_load", 
+      "negative_null_qty"
+    ]
+  }, 
+  {
+    "shipment_id": "SH-001394", 
+    "order_date": "2024-01-29", 
+    "cd_id": "CD-MTY", 
+    "store_id": "ST-0071", 
+    "sku": "SKU-001", 
+    "qty_ordered": 48, 
+    "qty_received": 48, 
+    "promised_delivery": "2024-01-31", 
+    "actual_delivery": "2024-01-31", 
+    "status": "Delivered", 
+    "issues": []
+  }, 
+  {
+    "shipment_id": "SH-001394", 
+    "order_date": "2024-01-29", 
+    "cd_id": "CD-MTY", 
+    "store_id": "ST-0071", 
+    "sku": "SKU-001", 
+    "qty_ordered": 48, 
+    "qty_received": 48, 
+    "promised_delivery": "2024-01-31", 
+    "actual_delivery": "2024-01-31", 
+    "status": "Delivered", 
+    "issues": [
+      "duplicate_id"
+    ]
+  }
+]
